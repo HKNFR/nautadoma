@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — NÀUTA DÒMA</title>
+<meta name="description" content="Contactez NÀUTA DÒMA : prise de rendez-vous en ligne, formulaire de contact, courtage bancaire et prestations drone.">
+<link rel="canonical" href="https://nautadoma.com/contact.html">
+<meta name="theme-color" content="#0A0D12">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="NÀUTA DÒMA — accueil">
+      <img class="brand__mark" src="assets/img/logo-emblem.png" alt="" width="36" height="36" decoding="async">
+      <span class="brand__text">
+        <span class="brand__name">NÀUTA DÒMA</span>
+        <span class="brand__sub">On vous guide, vous avancez</span>
+      </span>
+    </a>
+    <nav class="nav__links" id="menu" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="courtage.html">Courtage bancaire</a>
+      <a href="drone.html">Prises de vues drone</a>
+      <a href="contact.html" class="is-active">Contact</a>
+    </nav>
+    <div class="nav__cta">
+      <a class="btn btn--gold btn--sm" href="https://calendly.com/nautadoma" target="_blank" rel="noopener">Prendre rendez-vous</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow reveal">Contact</span>
+      <h1 class="h1 reveal" data-delay="1">Écrivez-moi, ou prenez directement un créneau.</h1>
+      <p class="lead reveal" data-delay="2">
+        Le premier échange est offert et sans engagement, que ce soit pour un projet de
+        financement ou pour une prestation drone. Réponse sous 24 heures ouvrées.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="form-layout">
+
+        <!-- ---------- Formulaire ---------- -->
+        <div class="reveal">
+          <h2 class="h3" style="margin-bottom:24px">Formulaire de contact</h2>
+
+          <!--
+            POUR ACTIVER L'ENVOI PAR MAIL :
+            1. Créez un compte gratuit sur https://formspree.io
+            2. Créez un formulaire, récupérez son identifiant
+            3. Remplacez VOTRE_ID ci-dessous par cet identifiant
+            Tant que ce n'est pas fait, le bouton ouvre le client mail du visiteur.
+          -->
+          <form id="contact-form" action="https://formspree.io/f/VOTRE_ID" method="POST" novalidate>
+
+            <div class="field">
+              <label for="nom">Nom et prénom <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="nom" name="nom" autocomplete="name" required placeholder="Jean Dupont">
+            </div>
+
+            <div class="field">
+              <label for="email">Adresse e-mail <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required placeholder="jean.dupont@exemple.fr">
+            </div>
+
+            <div class="field">
+              <label for="telephone">Téléphone</label>
+              <input type="tel" id="telephone" name="telephone" autocomplete="tel" placeholder="06 12 34 56 78">
+            </div>
+
+            <div class="field">
+              <label for="sujet">Votre demande concerne <span class="req" aria-hidden="true">*</span></label>
+              <select id="sujet" name="sujet" required>
+                <option value="">Choisissez un sujet…</option>
+                <option>Financement immobilier</option>
+                <option>Regroupement de crédits</option>
+                <option>Financement professionnel</option>
+                <option>Drone — inspection de toiture</option>
+                <option>Drone — valorisation d'un bien</option>
+                <option>Drone — captation d'événement</option>
+                <option>Autre demande</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Votre message <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" required placeholder="Décrivez votre projet en quelques lignes : ce que vous cherchez à faire, où vous en êtes, et sous quel délai."></textarea>
+            </div>
+
+            <div class="consent">
+              <input type="checkbox" id="rgpd" name="consentement" required>
+              <label for="rgpd">
+                J'accepte que les informations transmises soient utilisées pour traiter ma demande.
+                Elles ne sont ni revendues ni cédées à des tiers. Voir les
+                <a href="mentions-legales.html#donnees">informations sur les données personnelles</a>.
+              </label>
+            </div>
+
+            <button class="btn btn--gold" type="submit">Envoyer ma demande</button>
+            <p id="form-status" role="status" aria-live="polite" style="margin-top:16px;font-size:14.5px"></p>
+            <p class="form-note">Les champs marqués d'un astérisque sont obligatoires.</p>
+          </form>
+        </div>
+
+        <!-- ---------- Coordonnées ---------- -->
+        <div class="reveal" data-delay="1">
+          <h2 class="h3" style="margin-bottom:24px">Autres moyens de me joindre</h2>
+
+          <div class="contact-cards">
+
+            <div class="contact-card">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </div>
+              <div>
+                <h4>E-mail</h4>
+                <p><a href="mailto:nautadoma@gmail.com">nautadoma@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 3v3M16 3v3"/><path d="m9.5 14.5 1.8 1.8 3.4-3.6"/></svg>
+              </div>
+              <div>
+                <h4>Rendez-vous en ligne</h4>
+                <p>Choisissez directement un créneau dans mon agenda —
+                  <a href="https://calendly.com/nautadoma" target="_blank" rel="noopener">calendly.com/nautadoma</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10.5c0 5.5-8 12-8 12s-8-6.5-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10.5" r="2.8"/></svg>
+              </div>
+              <div>
+                <h4>Adresse</h4>
+                <p>31560 Nailoux<br>Entrepreneur individuel — R.S.A.C. de Toulouse</p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 4 6v6c0 5 3.4 8.4 8 9.5 4.6-1.1 8-4.5 8-9.5V6l-8-3.5Z"/><path d="m9 12 2 2 4-4.5"/></svg>
+              </div>
+              <div>
+                <h4>Vérifier mon immatriculation</h4>
+                <p>ORIAS n°26003629 —
+                  <a href="https://www.orias.fr" target="_blank" rel="noopener">registre officiel</a>
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html" aria-label="NÀUTA DÒMA — accueil">
+          <img src="assets/img/logo-complet-sombre.png" alt="NÀUTA DÒMA — on vous guide, vous avancez" width="230" decoding="async">
+        </a>
+        <p>Courtier en opérations de banque et en services de paiement, certifié IOBSP niveau II. Entrepreneur individuel immatriculé au R.S.A.C. de Toulouse.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="courtage.html">Courtage bancaire</a></li>
+          <li><a href="drone.html">Prises de vues drone</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:nautadoma@gmail.com">nautadoma@gmail.com</a></li>
+          <li><a href="https://calendly.com/nautadoma" target="_blank" rel="noopener">Prendre rendez-vous</a></li>
+          <li><a href="https://www.orias.fr" target="_blank" rel="noopener">Vérifier sur l'ORIAS</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> NÀUTA DÒMA — SIREN 993 104 298 — ORIAS n°26003629</span>
+      <div class="footer-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="mentions-legales.html#cgv">CGV</a>
+        <a href="mentions-legales.html#donnees">Données personnelles</a>
+        <a href="mentions-legales.html#reclamation">Réclamation &amp; médiation</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
