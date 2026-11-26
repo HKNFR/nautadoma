@@ -596,7 +596,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 /* --- Galerie photo : légendes et visionneuse ---------------------------- */
-.media--photo { margin: 0; display: block; }
+.media--photo, .media--video { margin: 0; display: block; }
+.media--video video { display: block; }
+.media--wide video, .media--wide img { position: absolute; inset: 0; }
+.media-grid > .media--wide { grid-column: span 2; aspect-ratio: auto; }
 .media--photo > a { display: block; width: 100%; height: 100%; cursor: zoom-in; }
 .media--photo img { transition: transform 0.6s ease; }
 .media--photo:hover img { transform: scale(1.04); }
@@ -610,7 +613,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .media__cap strong { display: block; color: var(--gold); font-weight: 600; font-size: 14px; margin-bottom: 3px; }
 .media__cap span { color: var(--text-muted); }
 @media (min-width: 621px) {
-  .media-grid > .media--photo:not(:first-child) .media__cap span { display: none; }
+  .media-grid > .media:not(:first-child):not(.media--wide) .media__cap span { display: none; }
 }
 
 .lightbox {
@@ -630,3 +633,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 .lightbox__close { top: 12px; right: 16px; }
 .lightbox__prev { left: 8px; top: 50%; transform: translateY(-50%); }
 .lightbox__next { right: 8px; top: 50%; transform: translateY(-50%); }
+
+@media (max-width: 860px) {
+  .media-grid > .media--wide { grid-column: auto; aspect-ratio: 4 / 3; }
+  .media--wide video, .media--wide img { position: static; }
+}
