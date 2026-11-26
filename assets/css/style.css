@@ -594,3 +594,39 @@ ul { margin: 0; padding: 0; list-style: none; }
   .pole { padding: 32px 26px; }
   .hero__actions .btn, .cta-band__actions .btn { width: 100%; }
 }
+
+/* --- Galerie photo : légendes et visionneuse ---------------------------- */
+.media--photo { margin: 0; display: block; }
+.media--photo > a { display: block; width: 100%; height: 100%; cursor: zoom-in; }
+.media--photo img { transition: transform 0.6s ease; }
+.media--photo:hover img { transform: scale(1.04); }
+.media__cap {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 44px 18px 16px;
+  background: linear-gradient(to top, rgba(6, 8, 12, 0.92), rgba(6, 8, 12, 0.55) 55%, transparent);
+  color: var(--text); font-size: 13px; line-height: 1.45;
+  pointer-events: none;
+}
+.media__cap strong { display: block; color: var(--gold); font-weight: 600; font-size: 14px; margin-bottom: 3px; }
+.media__cap span { color: var(--text-muted); }
+@media (min-width: 621px) {
+  .media-grid > .media--photo:not(:first-child) .media__cap span { display: none; }
+}
+
+.lightbox {
+  position: fixed; inset: 0; z-index: 1000;
+  display: none; align-items: center; justify-content: center; flex-direction: column;
+  padding: 24px; background: rgba(4, 6, 9, 0.94);
+}
+.lightbox.is-open { display: flex; }
+.lightbox img { max-width: 100%; max-height: 80vh; border-radius: 8px; object-fit: contain; }
+.lightbox__cap { margin-top: 16px; max-width: 760px; text-align: center; color: var(--text-muted); font-size: 14px; }
+.lightbox__cap strong { color: var(--gold); display: block; margin-bottom: 4px; }
+.lightbox button {
+  position: absolute; background: none; border: 0; color: var(--text);
+  font-size: 34px; line-height: 1; padding: 12px; cursor: pointer; opacity: 0.75;
+}
+.lightbox button:hover { opacity: 1; color: var(--gold); }
+.lightbox__close { top: 12px; right: 16px; }
+.lightbox__prev { left: 8px; top: 50%; transform: translateY(-50%); }
+.lightbox__next { right: 8px; top: 50%; transform: translateY(-50%); }
