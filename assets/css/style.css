@@ -638,3 +638,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   .media-grid > .media--wide { grid-column: auto; aspect-ratio: 4 / 3; }
   .media--wide video, .media--wide img { position: static; }
 }
+
+/* Grille de vignettes égales (pas de grande case) */
+.media-grid--even > *:first-child { grid-column: auto; grid-row: auto; }
+@media (min-width: 621px) {
+  .media-grid--even > .media .media__cap span { display: none; }
+}
