@@ -116,4 +116,59 @@
         });
     });
   }
+  /* --- Visionneuse de la galerie ----------------------------------------- */
+  var shots = Array.prototype.slice.call(document.querySelectorAll("[data-lightbox]"));
+  if (shots.length) {
+    var box = document.createElement("div");
+    box.className = "lightbox";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.setAttribute("aria-label", "Visionneuse photo");
+    box.innerHTML =
+      '<button type="button" class="lightbox__close" aria-label="Fermer">&times;</button>' +
+      '<button type="button" class="lightbox__prev" aria-label="Photo précédente">&#8249;</button>' +
+      '<img alt="">' +
+      '<div class="lightbox__cap"></div>' +
+      '<button type="button" class="lightbox__next" aria-label="Photo suivante">&#8250;</button>';
+    document.body.appendChild(box);
+    var bImg = box.querySelector("img");
+    var bCap = box.querySelector(".lightbox__cap");
+    var current = 0, opener = null;
+
+    var show = function (i) {
+      current = (i + shots.length) % shots.length;
+      var a = shots[current];
+      var fig = a.closest("figure");
+      var cap = fig ? fig.querySelector("figcaption") : null;
+      bImg.src = a.getAttribute("href");
+      bImg.alt = a.querySelector("img") ? a.querySelector("img").alt : "";
+      bCap.innerHTML = cap ? cap.innerHTML : "";
+    };
+    var open = function (i) {
+      opener = document.activeElement;
+      show(i);
+      box.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+      box.querySelector(".lightbox__close").focus();
+    };
+    var close = function () {
+      box.classList.remove("is-open");
+      document.body.style.overflow = "";
+      if (opener) opener.focus();
+    };
+
+    shots.forEach(function (a, i) {
+      a.addEventListener("click", function (e) { e.preventDefault(); open(i); });
+    });
+    box.querySelector(".lightbox__close").addEventListener("click", close);
+    box.querySelector(".lightbox__prev").addEventListener("click", function () { show(current - 1); });
+    box.querySelector(".lightbox__next").addEventListener("click", function () { show(current + 1); });
+    box.addEventListener("click", function (e) { if (e.target === box) close(); });
+    document.addEventListener("keydown", function (e) {
+      if (!box.classList.contains("is-open")) return;
+      if (e.key === "Escape") close();
+      else if (e.key === "ArrowLeft") show(current - 1);
+      else if (e.key === "ArrowRight") show(current + 1);
+    });
+  }
 })();
