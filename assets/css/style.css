@@ -644,3 +644,13 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media (min-width: 621px) {
   .media-grid--even > .media .media__cap span { display: none; }
 }
+
+.section--tight { padding-top: clamp(48px, 6vw, 72px); }
+#realisations { scroll-margin-top: 80px; }
+
+/* En-tête drone : texte à gauche, vidéo à droite */
+.page-head__split { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(28px, 4vw, 56px); align-items: center; }
+.page-head__media { box-shadow: 0 30px 60px -30px rgba(0,0,0,0.8); }
+@media (max-width: 860px) {
+  .page-head__split { grid-template-columns: 1fr; }
+}
