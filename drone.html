@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=4">
+<link rel="stylesheet" href="assets/css/style.css?v=6">
 </head>
 <body>
 
@@ -41,7 +41,8 @@
 <main>
 
   <section class="page-head">
-    <div class="wrap">
+    <div class="wrap page-head__split">
+      <div>
       <span class="eyebrow reveal">Prises de vues aériennes</span>
       <h1 class="h1 reveal" data-delay="1">Ce qu'on ne voit pas du sol.</h1>
       <p class="lead reveal" data-delay="2">
@@ -49,82 +50,26 @@
         mérite mieux qu'une photo de façade. Un événement dont il restera quelque chose.
         Le drone règle les trois.
       </p>
-    </div>
-  </section>
-
-  <!-- ============================ PRESTATIONS ============================ -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Prestations</span>
-        <h2 class="h2">Trois usages, trois livrables.</h2>
+      <div class="hero__actions reveal" data-delay="3" style="margin-top:30px">
+        <a class="btn btn--gold" href="#realisations">Voir les réalisations
+          <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="contact.html">Demander un devis</a>
       </div>
-
-      <div class="poles" style="grid-template-columns:1fr">
-
-        <article class="pole reveal">
-          <div class="pole__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 11 12 3l10 8M5 10v10h14V10"/><path d="M9 20v-5h6v5"/></svg>
-          </div>
-          <h3 class="h3">Contrôle et inspection de toitures</h3>
-          <p>
-            Vérifier l'état d'une couverture sans échafaudage, sans nacelle et sans monter
-            personne sur le toit. Tuiles déplacées, solins, gouttières, cheminée, mousses,
-            traces d'infiltration : le survol donne une vue nette de l'ensemble, zone par zone.
-          </p>
-          <ul class="pole__list">
-            <li>Utile avant achat, avant travaux, ou après un coup de vent</li>
-            <li>Photos haute définition de chaque versant et des points sensibles</li>
-            <li>Repérage sans intervention en hauteur</li>
-            <li>Livraison des clichés classés, exploitables par un couvreur ou un assureur</li>
-          </ul>
-        </article>
-
-        <article class="pole reveal" data-delay="1">
-          <div class="pole__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.8"/><path d="m3 17 5-4 4 3 3.5-3L21 17"/></svg>
-          </div>
-          <h3 class="h3">Mise en valeur de biens immobiliers</h3>
-          <p>
-            Un bien se vend d'abord en photo. Le drone montre ce qu'aucune photo au sol ne
-            peut montrer : l'implantation du terrain, l'exposition, le volume réel, ce qu'il
-            y a autour. Pour un propriétaire vendeur comme pour une agence.
-          </p>
-          <ul class="pole__list">
-            <li>Photos aériennes et vues d'ensemble du terrain</li>
-            <li>Vidéo courte de présentation, prête pour une annonce ou les réseaux</li>
-            <li>Valorisation de l'environnement : accès, vis-à-vis, dégagement</li>
-            <li>Fichiers livrés retouchés, au format demandé</li>
-          </ul>
-        </article>
-
-        <article class="pole reveal" data-delay="2">
-          <div class="pole__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
-          </div>
-          <h3 class="h3">Captation d'événements</h3>
-          <p>
-            Mariage, rassemblement, inauguration, manifestation sportive. Une vue aérienne
-            change complètement le souvenir qu'il en reste — et donne au montage final des
-            images que personne d'autre n'a.
-          </p>
-          <ul class="pole__list">
-            <li>Repérage préalable du site et des contraintes de vol</li>
-            <li>Séquences aériennes intégrées à votre montage, ou montage complet</li>
-            <li>Photos de groupe et vues d'ensemble</li>
-            <li>Livraison rapide des fichiers montés</li>
-          </ul>
-        </article>
-
       </div>
+      <figure class="media media--video page-head__media reveal" data-delay="2">
+        <video autoplay muted loop playsinline preload="auto" poster="assets/video/randonnee-montagne-poster.jpg" aria-label="Vidéo : deux randonneurs en montagne filmés par drone">
+          <source src="assets/video/randonnee-montagne.mp4" type="video/mp4">
+        </video>
+      </figure>
     </div>
   </section>
 
   <!-- ============================ GALERIE ============================ -->
-  <section class="section section--alt section--line">
+  <section class="section section--tight" id="realisations">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">Réalisations</span>
+        <span class="eyebrow">Réalisation · Inspection de toiture</span>
         <h2 class="h2">Une toiture, vue d'en haut.</h2>
         <p class="lead" style="margin-top:20px">
           Ces photos ont été réalisées à la demande d'un propriétaire qui avait un doute
@@ -177,10 +122,10 @@
   </section>
 
   <!-- ====================== ÉVÉNEMENTS & EXTÉRIEUR ====================== -->
-  <section class="section section--line">
+  <section class="section section--alt section--line">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">Événements &amp; extérieur</span>
+        <span class="eyebrow">Réalisations · Extérieur</span>
         <h2 class="h2">La nature, vue d'en haut.</h2>
         <p class="lead" style="margin-top:20px">
           Rivières, lacs, bord de mer, montagne : quelques images tournées en extérieur.
@@ -248,8 +193,76 @@
     </div>
   </section>
 
+  <!-- ============================ PRESTATIONS ============================ -->
+  <section class="section section--line">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Prestations</span>
+        <h2 class="h2">Trois usages, trois livrables.</h2>
+      </div>
+
+      <div class="poles" style="grid-template-columns:1fr">
+
+        <article class="pole reveal">
+          <div class="pole__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 11 12 3l10 8M5 10v10h14V10"/><path d="M9 20v-5h6v5"/></svg>
+          </div>
+          <h3 class="h3">Contrôle et inspection de toitures</h3>
+          <p>
+            Vérifier l'état d'une couverture sans échafaudage, sans nacelle et sans monter
+            personne sur le toit. Tuiles déplacées, solins, gouttières, cheminée, mousses,
+            traces d'infiltration : le survol donne une vue nette de l'ensemble, zone par zone.
+          </p>
+          <ul class="pole__list">
+            <li>Utile avant achat, avant travaux, ou après un coup de vent</li>
+            <li>Photos haute définition de chaque versant et des points sensibles</li>
+            <li>Repérage sans intervention en hauteur</li>
+            <li>Livraison des clichés classés, exploitables par un couvreur ou un assureur</li>
+          </ul>
+        </article>
+
+        <article class="pole reveal" data-delay="1">
+          <div class="pole__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.8"/><path d="m3 17 5-4 4 3 3.5-3L21 17"/></svg>
+          </div>
+          <h3 class="h3">Mise en valeur de biens immobiliers</h3>
+          <p>
+            Un bien se vend d'abord en photo. Le drone montre ce qu'aucune photo au sol ne
+            peut montrer : l'implantation du terrain, l'exposition, le volume réel, ce qu'il
+            y a autour. Pour un propriétaire vendeur comme pour une agence.
+          </p>
+          <ul class="pole__list">
+            <li>Photos aériennes et vues d'ensemble du terrain</li>
+            <li>Vidéo courte de présentation, prête pour une annonce ou les réseaux</li>
+            <li>Valorisation de l'environnement : accès, vis-à-vis, dégagement</li>
+            <li>Fichiers livrés retouchés, au format demandé</li>
+          </ul>
+        </article>
+
+        <article class="pole reveal" data-delay="2">
+          <div class="pole__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+          </div>
+          <h3 class="h3">Captation d'événements</h3>
+          <p>
+            Mariage, rassemblement, inauguration, manifestation sportive. Une vue aérienne
+            change complètement le souvenir qu'il en reste — et donne au montage final des
+            images que personne d'autre n'a.
+          </p>
+          <ul class="pole__list">
+            <li>Repérage préalable du site et des contraintes de vol</li>
+            <li>Séquences aériennes intégrées à votre montage, ou montage complet</li>
+            <li>Photos de groupe et vues d'ensemble</li>
+            <li>Livraison rapide des fichiers montés</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ============================ DÉROULÉ ============================ -->
-  <section class="section">
+  <section class="section section--alt section--line">
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Déroulé d'une prestation</span>
@@ -276,7 +289,7 @@
     </div>
   </section>
 
-  <section class="section section--alt section--line">
+  <section class="section section--line">
     <div class="wrap">
       <div class="cta-band reveal">
         <span class="eyebrow">Devis</span>
